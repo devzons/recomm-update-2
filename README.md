@@ -68,3 +68,47 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Stripe Payment
+
+Github: react-stripe-checkout documentation [https://github.com/azmenak/react-stripe-checkout](https://github.com/azmenak/react-stripe-checkout)
+
+### Heroku
+
+Download Heroku CLI documentation: [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
+
+`brew tap heroku/brew && brew install heroku`
+`heroku --version`
+`heroku login` 
+`Logged in as <youremail>`
+
+#### useful heroku command
+
+* You don't have to run npm build with next command
+`heroku create devzons-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git`
+
+* After setting up build pack, push project files 
+`git push heroku master`
+
+* Buildpack documentation
+here [https://github.com/mars/create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack)
+
+### After Deploying Heroku
+
+* Add heroku domain to Firebase to test Google Sign in
+
+### Remove logger only in production
+
+* update store.js file
+```
+const middlewares = []
+
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger)
+}
+```
+* next command will rebuild the app
+`git push heroku master`
+
+### Live app
+Here [https://devzons-clothing.herokuapp.com](https://devzons-clothing.herokuapp.com/)
