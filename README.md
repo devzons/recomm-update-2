@@ -110,5 +110,27 @@ if (process.env.NODE_ENV === 'development') {
 * next command will rebuild the app
 `git push heroku master`
 
+## Advanced Topics
+
 ### Live app
 Here [https://devzons-clothing.herokuapp.com](https://devzons-clothing.herokuapp.com/)
+
+### Firebase 
+
+Firebase documentation [https://firebase.google.com/docs/firestore/quickstart](https://firebase.google.com/docs/firestore/quickstart)
+
+* QueryReferences
+* QuerySnapshot
+* Security Rules
+
+### QueryReference
+
+`firestore.doc('/users/:userId')`
+`firestore.collections('/users')`
+
+#### DocumentReference vs CollectionReference
+
+| DocumentReference | CollectionReference |
+|---|---|
+| documentRef | collectionRef |
+|.set(), .get(), .update(), .delete() | .add() |
